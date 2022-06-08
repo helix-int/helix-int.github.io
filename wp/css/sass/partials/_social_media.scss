@@ -1,0 +1,266 @@
+/* ==========================================================================
+   SOCIAL MEDIA ICONS
+   ========================================================================== */
+
+	ul.social_media{
+		margin: 0;
+		padding: 0;		
+		list-style: none;
+		position: relative;
+		display: inline-block; 
+		vertical-align: middle; 
+		line-height: 1;
+
+		> li{
+			float: left;
+			margin: 0 4px;
+			position: relative;
+			line-height: 1;
+			padding: 0;
+		}
+
+		span{
+			display: none;
+		}			
+
+		a{
+			text-decoration: none;
+		}
+	}
+
+   .footer{
+		ul.social_media{
+
+			> li{
+				margin: 0 4px 4px 0;
+			}
+
+			> li a > span{ 
+				min-width: 200px;
+				padding: 10px;
+				position: absolute;	
+				left: -85px;
+				bottom: 67px;
+				text-align: center;
+				@include transform( scale(0) ); 
+				@include backface-visibility(hidden);
+				@include transition( bottom 0.3s ease-out );
+				visibility: hidden;
+				display: block;
+
+				&:after {
+					bottom: -18px;
+					content: "";
+					height: 10px;
+					left: calc(50% - 5px);
+					position: absolute;
+					width: 10px;
+					border-width: 10px;
+					border-style: solid;
+					border-color: transparent;
+					background-color: transparent !important;
+				}			
+				
+			}
+	 
+			> li a{
+				display: block;
+				padding: 10px;
+				text-decoration: none;
+				color: #fff !important; 
+				z-index: 3;
+				position: relative;
+			}
+
+			> li:after, > li:before {
+				content: "";
+				height:0;
+				width: 100%;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0;				
+			}
+
+			> li:before {
+				height:100%;
+				opacity: 1;					
+				z-index: 1;
+			}
+
+			> li:after {
+				z-index:2;
+			}
+
+			> li:hover a{ 
+				text-decoration: none;
+			}			
+			
+			> li:hover a > span{ 
+				bottom: calc(1em + 30px);
+				@include transform( scale(1) );
+				@include transition( bottom 0.3s ease-out );
+				@include backface-visibility(hidden);
+				visibility: visible;
+			}
+
+			> li:hover:after {
+				@include transition( all .3s ease-out );
+				opacity: 1; 
+				height: 100%;
+			}
+
+
+			$social_media_list: ( 
+				("facebook", #3B5998), 
+				("twitter", #10c0ee), 
+				("gplus", #e3614a),
+				("flickr", #ff3092),
+				("mail", #999),
+				("lastfm", #da260e),
+				("dribbble", #EA4C89),			
+				("linkedin", #006e99),
+				("vimeo", #0ec4ef),
+				("youtube-play", #f3554f),
+				("instagram", #7b6455),
+				("behance", #228cff),
+				("dropbox", #499dd6),
+				("picasa", #aa7bbc),
+				("rss", #fd8900),
+				("skype", #00b0e1),
+				("stumbleupon", #6cc977),
+				("pinterest", #d62930),
+				("github", #888),
+				("tumblr", #456885),
+				("spotify", #afd102),
+				("evernote", #6fbd45),
+				("flattr", #f7af30),
+				("paypal", #003f70),
+				("vkontakte", #2f6893),
+				("soundcloud", #F76700),
+				("foursquare", "rgb(36,178,237)"),
+				("delicious", "rgb(51,153,255)"), 
+				("forrst", "rgb(90,153,103)"), 	
+				("ebay", "rgb(221,59,74)"), 
+				("android", "rgb(128,189,1)"), 		
+				("xing", "rgb(210,214,0)"), 
+				("reddit", "rgb(255,69,0)"), 
+				("digg", "rgb(0,0,0)"), 
+				("macstore", "rgb(27,189,251)"), 
+				("myspace", "rgb(9,17,164)"), 
+				("amazon", "rgb(245,147,24)"), 
+				("stackoverflow", "rgb(254,122,21)"), 
+				("slideshare", #0479B6),
+				("whatsapp", #2db742),
+				("telegram", #2ea5de),
+				("odnoklassniki", #f58221),
+			);
+
+			@each $item in $social_media_list {
+				$selector : nth($item, 1);
+				$color : nth($item, 2);
+
+				.#{$selector}:hover:after, .#{$selector} span, .#{$selector} span:after{
+					background: $color;
+					border-top-color: $color;
+				}
+			}
+		}
+	}
+
+	ul.social_media.multiline-list{
+
+		> li:before, > li:after{
+			width: 38px;
+		}		
+
+		a:before{
+			margin-right: 20px;
+		}
+
+		> li {
+			margin: 0 0 10px 0;
+			float: none;
+		}		
+	}
+
+
+
+/* Social Share
+   ========================================================================== */
+	.social_share{
+		display: block;
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		text-align: center;  
+		font-size: 1em;
+
+		span > span{
+			display: none;
+			margin-left: 1em;
+			letter-spacing: 0.5em;
+			font-size: 0.875em;			
+		}
+
+		> span:hover span{
+			display: inline-block;
+		}
+    
+		ul{
+			display: none;
+		}
+	}
+
+	.entry-footer .social_share:not(:only-child){
+		float: right; 
+	}
+
+	//icons
+	.businesslounge-share-content{
+		text-align: center;
+
+		ul{
+			font-size: 22px;
+			margin: 0;
+			padding: 0;
+		}
+
+		li{
+			list-style: none;
+			display: inline;
+
+			a{
+				text-decoration: none;
+				color: #fff;
+				transition: all .5s ease;
+				position: relative;
+				border: 3px solid transparent;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				display: inline-block;
+				line-height: 60px;
+				margin: 10px;
+
+				&:hover{
+					transition: all .5s ease;
+					border-color: #fff;
+
+					span{
+						display: inline-block;
+						position: absolute;
+						margin-top: 60px;
+						width: 200px;
+						text-align: center;
+						margin-left: -115px;						
+					}
+				}
+			}
+
+			span{
+				display: none;
+			}
+		}		
+ 	
+	}

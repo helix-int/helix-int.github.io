@@ -1,0 +1,383 @@
+/* ==========================================================================
+   WIDGETS
+   ========================================================================== */
+
+	.widget:not(.topbar-widget){
+
+		> ul{
+			padding-left: 0;
+			list-style: none;			
+
+				> li{ 
+					line-height: 160%;
+					padding: 5px 0;
+					position: relative;
+
+					&:first-child{
+						padding-top: 0;
+					}
+				}
+
+				> li a,> li a:hover{
+					text-decoration: none;
+				}
+
+				> li{
+					border-style: solid;
+					border-width: 0;						
+				}
+
+				> li:last-child{
+					border-width: 0;						
+				}		
+		} 
+
+		ul:last-child{
+			margin-bottom: 0;
+		}
+
+		#loginform label{
+			width: 30%;
+			text-align: left;
+		}
+	}
+
+
+	//menu - list widgets only
+	.widget:not(.topbar-widget){
+
+		&.widget_pages > ul, &.widget_categories > ul, .product-categories, .menu{
+			padding-left: 0;
+			list-style: none;						
+
+				> li > ul, > li > .sub-menu, > li > .children{
+					border-style: solid;
+					border-width: 1px 0 0; 		
+					padding-top: 10px;
+					margin-top: 5px;
+				}
+
+				ul{
+					list-style: none;
+					margin: 5px 0;
+					padding: 0;
+					font-size: 0.875em;
+
+					ul{
+						padding-left: 15px;		
+						font-size: 1em;				
+					}
+				}
+
+				> li{ 
+					line-height: 160%;
+					padding: 5px 0;
+					position: relative;
+					border-style: solid;
+				 	border-width: 0 0 1px;
+
+				 	> a{
+				 		font-weight: bold;
+				 	}
+
+					&:before{
+						content: "";
+						padding-right: 0;
+						line-height: 1em;
+						@include transition( all 0.3s ) ;	
+						opacity: 0;
+						color: var(--primary-color);
+					}				
+
+					&:hover:before{
+						content: "\28";
+						font-family: "rtui";
+						padding-right: 10px;
+						opacity: 1;
+					}
+
+					&:first-child{
+						padding-top: 0;
+					}
+				}
+
+				li a{
+					color: var(--text-color);
+				}
+
+				> li a,> li a:hover{
+					text-decoration: none;
+				}
+
+				> li:last-child{
+					border-width: 0;						
+				}		
+		}
+
+		.current-menu-item > a, ul > .current-cat > a, .current-cat-parent > a{
+			font-weight: bold;
+		}
+
+		.sub-menu, .children{
+
+			li a {
+				position: relative;
+			}
+
+		}
+
+	}
+
+
+	/* search widget */
+	.wp-search-form, .woocommerce-product-search{
+		li{
+			position: relative;
+		}
+
+		span{
+			cursor: pointer;
+			line-height: 3em;
+			opacity: 0.3;
+			position: absolute;
+			right: 10px;
+			text-align: right; 
+			width: 40px;
+			top: 0;
+		}
+
+		span:hover{
+			opacity: 1;
+		}	
+
+		input{
+			width: 100%;
+			padding: 10px !important;
+			line-height: 1em;
+			height: 2em;
+			border-width: 1px !important;
+		}
+	}
+
+	/* text widget */
+	.textwidget p:last-child{
+		margin-bottom: 0;
+	}
+
+	/* widget titles */
+	.wpb_widgetised_column, .sidebar{
+
+		.widget > h5{
+			position: relative;
+			padding: 0 0 15px 0;
+			margin: 0 0 15px; 
+		}
+
+	}
+
+	.sidebar .widget:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+
+	.wpb_widgetised_column .widget:not(:last-child){
+		margin-bottom: 30px;
+	}
+
+	/* Site sidebar widgets */
+	.sidebar .widget{
+		padding: 30px;
+		border-width: 1px;
+		border-style: solid;
+	}
+
+	/* Latest Posts */
+	.widget_latest_posts, .widget_popular_posts{
+		> div{
+			@include clearfix();			
+		}
+
+		> div:not(:last-child){
+			margin-bottom: 20px;
+		}
+
+		.post-thumb{
+			float: left;
+			margin: 0 20px 10px 0;
+		}
+
+		.meta{
+			display: block;
+			letter-spacing: 1px;
+			font-size: 0.8em;
+
+			a{
+				text-decoration: none;
+			}
+		}	
+
+		p:last-child{
+			margin-bottom: 0;
+		}
+
+		.title{
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		.title:hover{
+			text-decoration: underline;
+		}	
+
+		.icon-comment-empty{
+			margin-right: 2px;
+		}
+	}
+
+	/* left side widgets holder */
+	.widgets_holder.sidebar-widgets{
+		.widget {
+			padding: 20px;
+		}
+	}
+
+	/* Footer widgets */
+	.footer_widgets .widget{
+		margin-bottom: 25px;
+	}
+
+	.footer_widgets .widget h5{
+		margin: 0 0 30px;
+	}
+
+	
+	/* WP calendar */
+	.widget_calendar table{
+		width: 100%;
+	}
+
+	/* tag clound */
+	.widget_tag_cloud a{
+		font-size: 14px !important;
+		padding: 10px;
+		border-style: solid;
+		border-width: 1px;
+		padding: 5px;
+		display: inline-block;
+		margin-bottom: 10px;
+		text-decoration: none;	
+	}
+
+	.widget_tag_cloud a:hover{
+		border-width: 0;
+		padding: 6px;
+	}	
+
+	/* flickr */
+	.flickr_thumbs {
+		margin: 10px 0 10px 0 !important;
+		padding: 0;
+		overflow: hidden;
+		border:0 !important;
+		background:none !important;
+	}
+
+	.flickr_thumbs li {
+		list-style: none;
+		float: left;
+		margin:  0 2% 2% 0 !important;
+		padding: 0 !important;
+		border:0 !important;
+		background:none !important;
+		width:31%;
+	}
+
+	.flickr_thumbs li a {}
+
+	.flickr_thumbs li img {
+		display: block;
+	}
+
+	.flickr_thumbs li a img {
+		border: none;
+		width:100%;
+	}
+
+	.flickr_thumbs li .frame {
+		margin:0 !important;
+		padding:5px !important;
+	}
+
+	.flickr_thumbs li.hide{
+		display:none;
+	}
+
+	.flickr_thumbs li:hover img{	
+		opacity: 0.8;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  
+	}			
+
+
+	/* WP Instagram Widget */
+	ul.instagram-pics.instagram-size-thumbnail {
+		margin-left: -2px;
+		margin-right: -2px;
+		display: inline-block;
+
+		li{
+			width: 33.333%;
+			float: left;
+			padding: 2px !important;			
+		}
+
+		a:hover img{
+			opacity: 0.7;
+		}		
+	}
+
+// ==========================================================================
+//  Category Tree
+// ==========================================================================
+	.rt-category-tree{
+			padding-left: 0;
+			list-style: none;
+			position: relative;
+			overflow: hidden;
+
+			.has-children{
+				padding-right: 20px;
+
+				> span{				
+					@include icon( "\e802" );
+					cursor: pointer;
+					position: absolute;
+					right: 0;
+					font-size: 0.8em;
+
+					&:hover{
+						opacity: 0.4;
+					}
+				}
+
+			}
+
+			li > ul{
+				display: none; 
+			}
+
+			.current-cat-ancestor, .current-cat, .active{
+
+				> span{
+					@include icon( "\e801" );
+				}
+
+				> ul{
+					display: block;
+				}
+			}
+	}
+
+	.rtl .rt-category-tree .has-children > span {
+		left: 0;
+		right: auto;
+	}

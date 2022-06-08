@@ -1,0 +1,511 @@
+/* ==========================================================================
+   MAIN NAVIGATION
+   ========================================================================== */
+
+
+/* Desktop Navigation
+   ========================================================================== */
+	.header-col .main-menu{
+		list-style: none outside none;
+		margin: 0;
+		padding: 0;
+		line-height: 1.4em;
+
+		> li{
+			position: relative;
+			display: inline-block;
+			float: left;
+
+			//top level items
+			> a{
+				text-align: left;
+				text-decoration:none;
+				outline: none;
+				position: relative;
+				line-height: 1em;
+				display: block;
+			}
+
+			a > span{
+				border-width: 0 1px 0 0;
+				border-style: solid;
+				border-color: transparent;
+				position: relative;
+			}
+
+			// hover and active states
+			> a:hover,
+			&.current-menu-ancestor > a,
+			&.current-menu-item > a
+			{
+				text-decoration:none;
+			} 	
+		}
+
+		a > span {
+			display: inline;
+		}
+
+		> li > a sub{
+			display: none;
+		}
+
+		sub{
+			display: block;
+			font-size: 0.92em;
+			bottom: 0;
+			margin-top: 0.8em;
+			margin-bottom: 0.8em;			
+		}
+
+		//icons
+		span > i:before, a > i:before{
+			margin-right: 0.5em;
+		}
+
+		// sub menus
+		ul{
+			visibility: hidden;
+			position: absolute;			
+			width: 220px;
+			list-style: none outside none;
+			z-index: 99999;
+			margin: 0;
+			padding: 0;	
+			text-align: left;			
+			height: 0;
+			overflow: hidden;
+
+			li{
+				position: relative; 
+
+				// sub level items
+				a{
+					display: block;
+					border-style: solid;
+					border-width: 0 0 1px; 	
+					border-color: transparent;
+					text-decoration:none;	  
+					padding-top: 0.6em;		
+					padding-bottom: 0.6em;
+				}			
+
+				// hover and active states
+				a:hover, > .current-menu-ancestor > a{
+					text-decoration:none;			
+				}				
+			}	
+
+
+			//2+ level sub menus			
+			ul{
+				margin-left: 220px;
+				top: 0;
+				padding: 0 0 0 2px;
+				width: 222px;
+			}
+
+			ul ul{
+				top: 0;
+			}
+		}
+
+		> li:not(.multicolumn) ul{
+			@include box-shadow( 2px 2px 0 rgba(0, 0, 0, 0.04) ); 
+			@include transition( opacity 0.5s ease 0.1s );
+			transform-origin: top; 
+			opacity: 0;
+		}
+
+		li:not(.multicolumn):hover > ul,
+		li.hover:not(.multicolumn) > ul
+		{
+			height: auto;
+			overflow: visible;
+			opacity: 1; 
+		}
+
+		li.submenu-loaded:hover > ul,
+		li.submenu-loaded.hover > ul, 
+		li li:hover > ul,
+		li li.hover > ul
+		{
+			visibility: visible; 
+		}        
+		
+
+		// indicator
+		> li.menu-item-has-children > a > span:after{
+			content: "\2a";
+			font-family: 'rtui';
+			padding-left: 0.4em;
+			line-height: 1;
+		}
+
+
+		> li li.menu-item-has-children:after{
+			content: "\28";
+			font-family: "rtui";
+			position: absolute;
+			z-index: 999;
+			right: 10px;
+			top: 0.5em; 
+		} 	
+
+
+		// Opposite direction for the drop down menus
+		> li.o-direction .sub-menu{
+			right: 0;
+			text-align: right;		
+
+			li.menu-item-has-children:after{
+				content: "\22";
+				left: 10px;
+				right: auto;
+			}
+
+			//2+ level sub menus
+			ul{
+				margin-right: 220px;
+				padding: 0 2px 0 0;
+				margin-left: auto;
+			}
+		}
+	}
+
+	.sticky-header-holder .header-col .main-menu > li > a{
+		line-height: 60px;
+	}
+
+	.main-menu{
+		//Mega Menu
+		.multicolumn{
+			position: static;	
+		}
+
+		li.multicolumn > ul{
+			@include box-shadow( 2px 2px 0 rgba(0, 0, 0, 0.04) ); 
+			@include transition( opacity 0.5s ease 0.1s  );
+			transform-origin: top; 
+			opacity: 0;
+		}
+
+ 		li.multicolumn.submenu-loaded:hover > ul,
+ 		li.multicolumn.submenu-loaded.hover > ul{
+ 			height: auto;
+ 			visibility: visible;
+ 			opacity: 1; 
+
+			ul{
+				height: auto;
+				opacity: 1;
+				visibility: visible;
+			}			
+		}
+
+		@for $i from 1 through 8 {  
+			.multicolumn-#{$i} > ul > li{		 	 
+			 	width: #{percentage( 1 / $i )};
+			}
+		}
+
+		.multicolumn-holder{
+			padding: 0;	
+			display: table;
+			width: 100%;
+			left: auto;
+			height: auto;
+			opacity: 0;
+			margin: 50px 0 0 0;
+			@include box-shadow( 2px 2px 0 rgba(0, 0, 0, 0.04) );
+			@include transition( opacity 0.5s ease 0s, margin 0.5s ease 0s );
+
+
+			//columns
+			> li{
+				display: table-cell;
+				margin: 0; 
+				padding: 24px;		
+
+				&:not(:last-child){
+					border-width: 0 1px 0 0;
+					border-style: solid;
+				}							
+			}
+
+			//column items
+			> li > ul{		
+				padding: 0;
+				margin: 0;
+				@include box-shadow( none );
+
+				&,.sub-menu{
+					position: static;
+					margin-left: 0;
+					margin-top: 0;
+					display: block; 
+					width: auto;
+				}
+
+				> li{
+					margin: 0;
+				}
+
+				> li:not(:last-child) > .sub-menu{
+					margin-bottom: 30px;
+				}
+
+
+				li > a:before{
+					content: "\28";
+					font-family: 'rtui';
+					padding-right: 0.4em;
+				}
+
+				> li.menu-item-has-children > a,
+				> li.menu-item-has-children > span{
+					border-width: 0 0 1px 0;
+					border-style: solid; 
+					display: block;
+					padding: 0 0.75em 0.4em 0.75em;
+					margin-bottom: 0.75em;
+				}
+
+				li li.menu-item-has-children > span, li li.menu-item-has-children > a{
+					margin-bottom: 0.4em;
+				}
+				
+				li > a, li > span{
+					border-width: 0;
+					padding: 0 0.75em 0.4em 0.75em;
+				}
+
+
+				li.menu-item-has-children::after{
+					content: "";
+				}
+
+				li .sub-menu > li:last-child a{
+					padding-bottom: 0;
+				}
+
+				ul{
+					box-shadow: none;
+					margin: 0;
+					width: auto;
+					border-width: 0;
+					padding: 0;
+					height: auto;
+
+
+					.sub-menu {
+						margin-bottom: 0.75em;
+						margin-left: 0.75em;
+
+						a:before{
+							content: none;
+						}
+					}				
+				}
+
+
+				ul sub,
+				li:not(.menu-item-has-children) > a > sub{
+					margin-left:0.75em;
+				}				
+
+				ul li{ 
+					margin-top: 0;
+				}
+			}
+
+			//icons
+			a > i{
+				float: right;
+				&:before{
+					margin-right: 0;
+					margin-left: 0.5em;
+				}				
+			}
+		}
+
+	} 
+
+
+	//remove border of last menu item if shortcut buttons is not active
+	.header-right nav:last-child .header-col .main-menu > li:last-child > a{
+		border-width: 0;
+	}
+
+	//widget menus in header
+	.sub-menu li{
+		&[class^="icon-"]:before, &[class*=" icon-"]:before {
+			float: left;
+			line-height: 3em;
+			margin: 0 0.8em;
+		}
+	}
+
+/* ==========================================================================
+   MOBILE NAVIGATION 
+   ========================================================================== */
+
+		//mobile nav
+		.mobile-nav{
+			display: none;
+			position: absolute;
+			width: 100%;
+			z-index: 480;
+			left: 0;
+		}
+
+		#mobile-navigation{
+			border-width: 1px 0 0 0;
+			border-style: solid;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			> li{
+				float: none;
+				display: block;
+			}
+
+			a > sub {
+				display: block;
+				font-size: 11px;
+				font-style: oblique;		
+				padding: 5px 0;	
+			}
+
+
+			li a, li > span{
+				position: relative;
+				display: block;
+				text-align: left;
+				border-width: 0 0 1px 0; 
+				padding: 10px 20px;
+				text-decoration: none;
+				border-style: solid;
+				line-height: 1.8 !important;
+			}
+
+			ul li a, ul li > span {
+				border-style: solid;
+				border-width: 0 0 1px; 
+			}
+
+			> li > a:after, li span:after {
+  				background-color: transparent;
+			}
+
+			// sub menus
+			ul{
+				list-style: none;
+				display: none;
+				position: relative;
+				right: 0;
+				width: 100%; 
+				margin: 0;
+				padding: 0;
+				border-width: 0;
+			}
+
+			ul ul{
+				border-width: 0;
+			}
+
+			> li > ul{
+				margin: 0;
+			}
+
+			ul li:first-child a, ul li:first-child > span{
+				border-width: 0 0 1px 0;
+			}
+
+			li:hover > ul		
+			{
+				display: none;
+			}
+
+			li.menu-item-has-children
+			{
+				> a, > span {
+					padding-right: 65px;
+					@include icon("\e802");
+					position: relative;
+				}											
+				
+				&.current-menu-item > a, &.current-menu-item > span{
+					@include icon("\e801");
+				}
+
+				> a:after, > span:after{
+					border-style: solid;
+					border-width: 0 0 0 1px;
+					height: 100%; 
+					position: absolute;
+					right: 50px; 
+					content: "";
+					top: 0;
+					z-index: 999;
+				}					
+
+				> a:before, > span:before{
+					cursor: pointer;
+					margin: -5px 0 0 0;
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					text-align: left;
+					width: auto;
+					z-index: 999;
+					margin: -6px 0 0 0 !important; 
+					line-height: 1;
+					font-size: 12px;
+					width: auto !important;
+				}
+			}
+
+
+			li.current-menu-item
+			{										
+				> ul{
+					display: block;	
+				}										
+			}
+
+			// indicator
+			li.current-menu-ancestor:after,
+			li.current-menu-item:after,
+			li:hover:after,
+			li:after{						
+				content: none;
+			} 
+
+			//sub menu paddings
+			li li li a{
+				padding-left: 25px;
+			}
+
+			li li li li a{
+				padding-left: 35px;
+			}
+
+			li li li li a{
+				padding-left: 45px;
+			}
+
+			li li li li li a{
+				padding-left: 50px;
+			}
+
+			li li li li li li a{
+				padding-left: 60px;
+			}
+
+			li li li li li li li a{
+				padding-left: 70px;
+			}
+
+		} 

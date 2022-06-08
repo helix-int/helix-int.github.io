@@ -1,0 +1,418 @@
+/* ==========================================================================
+   GLOBAL STRUCTURE
+   ========================================================================== */
+
+/* Body
+   ========================================================================== */
+	body {
+		color: $primary-font-color;  		
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale; 				
+	}
+
+/* Container
+   ========================================================================== */
+	#container {		
+		position: relative; 
+		overflow: hidden;
+	}
+
+	.boxed-body-style #container{		
+		margin: 40px auto; 
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); 
+	} 
+ 
+
+/* Main Content Holder, Rows, Columns
+   ========================================================================== */ 
+	#main_content{
+		padding: 0;
+		position: relative;
+		@include transition( opacity 0.2s linear 0.2s );
+		opacity: 1;
+	}
+
+	.page-template-template-blank-page 	#main_content{
+		margin-top: 0 !important;
+	}
+
+	/* content row */
+	.content_row{
+		@include clearfix(); 
+		border-width: 0;
+		border-style: solid;  
+		position: relative;
+		margin: auto;
+	}
+
+	//overwrite the vc_row margin
+	div:not(.content) > .content_row{
+		margin: auto;	 
+	}
+
+
+	/* standard page content - no builder used */
+	.content_row.no-composer:not(.with_sidebar) > .content_row_wrapper > .col{
+		padding-left: floor(($rt-grid-gutter-width / 2));
+		padding-right: floor(($rt-grid-gutter-width / 2));
+	}
+
+	/* Column Gaps */
+	.rt-column-gaps > div > .rt-column-container{
+		padding-left: floor(($grid-gutter-width / 2));
+		padding-right: floor(($grid-gutter-width / 2));		
+		box-shadow: none;
+	}
+
+	/* flex wrapper */
+	.rt-flex-wrapper{
+
+		> div{	
+			box-sizing: border-box;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+			> div {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+
+				> div {
+					-webkit-box-flex: 1;
+					-webkit-flex-grow: 1;
+					-ms-flex-positive: 1;
+					flex-grow: 1;
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					
+						@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+							/* IE10+ specific styles */
+							& > * {
+								min-height: 1em;
+							}
+			        }					
+				}
+			}
+
+			&::before,&::after {
+				display: none;
+			}
+	   }
+	}	
+
+	/* equal heights */
+	.fixed_heights > *{
+
+			box-sizing: border-box;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+
+		> *{
+			-webkit-box-align: stretch;
+			-webkit-align-items: stretch;
+			-ms-flex-align: stretch;
+			align-items: stretch;
+		}	
+
+		&::before,&::after {
+			display: none;
+		}
+	}
+
+	/* content aligmnets */
+	div.align-contents{	
+		flex-direction: row;
+		-webkit-flex-direction: row;
+
+		 > div{
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+
+				> *{
+					display: flex;
+					flex-direction: column; 
+					-ms-flex-direction: column; 
+				}
+
+		 } 
+
+		&.content-align-middle {
+				 > div > *{
+					justify-content: center;
+					-ms-flex-pack: center;
+				}
+		}		
+
+		&.content-align-bottom {
+				 > div > *{
+					justify-content: flex-end;
+					-ms-flex-pack: end;
+				}
+		}		
+	}
+
+
+	/* Column Alignments */
+	.content_row.align-columns{		
+		@include display-flex;	
+
+		&.column-align-bottom {
+			@include align-items(flex-end); 
+
+			.content_row_wrapper{
+				margin-top: initial;
+				margin-bottom: initial;
+			}			
+		}				
+
+		&.column-align-middle {
+			@include align-items(center); 			
+		}		
+	}
+
+
+	/* content row wrapper */
+	.content_row_wrapper{
+		@include clearfix(); 
+		display: block;
+		width: 100%;
+		padding: 25px 0;
+		margin: auto;
+
+		&.fullwidth {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	
+	.content_row.no-composer > .content_row_wrapper.fullwidth{
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	//row video backgrounds
+	.content-row-video-overlay,.content-row-video{
+		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	//transparent row backgrounds
+	.transparent-bg{
+		background-color: transparent !important;
+	}	
+
+	.archive .content_row.no-composer.default-style,
+	.home .content_row.no-composer.default-style{
+		background-color: transparent;
+	}
+
+	.has-video-bg{
+		position: relative;
+		overflow: hidden;
+	}
+
+	//overlay bg colors
+	.has-bg-overlay{
+		position: relative;
+		overflow: hidden;
+	}	
+
+	//animated columms
+	.js .animate-cols > .content_row_wrapper > *{
+		opacity: 0;
+	}
+
+	.has-bg-overlay > .rt-wrapper{
+		position: relative;
+	}
+
+	.content-column-overlay{
+		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;		
+	}
+
+	.full-height-row{
+		min-height: 100vh;
+	}
+	
+	.admin-bar .full-height-row{
+		min-height: calc( 100vh - 32px ) ;
+	}
+
+/* Columns
+   ========================================================================== */
+	.infinite-background {
+		height: 100%;
+		position: absolute;
+		left: 0;
+		z-index: 0;
+		top: 0;
+	}
+
+/* Sidebars
+   ========================================================================== */
+	.sidebar{
+		-webkit-transform: translateZ(0);
+		-webkit-transform: translate3d(0,0,0);
+		backface-visibility: hidden;
+		will-change: min-height;
+
+
+		.sidebar__inner{
+			transform: translate(0, 0); /* For browsers don't support translate3d. */
+			transform: translate3d(0, 0, 0);
+			will-change: position, transform;
+		}
+
+		.sidebar__inner > div {
+			position: relative;
+			z-index: 1;
+		}			
+	}
+
+	.sidebar.right {
+		float: right;
+		&:before{
+			left: 0;
+		}
+	}
+
+	.sidebar.left{
+		float: left;
+		&:before{
+			right: 0;
+		}
+	}
+
+
+/* Contents with sidebars
+   ========================================================================== */
+	.content.left-sidebar{
+		float: right;  
+		padding-left: 15px; 
+	}
+
+	.content.right-sidebar{
+		float: left; 
+		padding-right: 15px; 
+	}
+
+/* Flexbox fixes
+========================================================================== */ 
+//ie	
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.elementor-section-height-min-height{
+		display: flex;
+		flex-direction:row;
+
+			> .elementor-container{
+				align-items: center;
+				display:flex; 
+				flex: 0 0 100%;
+			}
+	}
+} 
+
+/* Siteorigin Related Fixes
+========================================================================== */ 
+.siteorigin-panels #main_content > .content_row > .content_row_wrapper{
+	padding: 0;
+}
+
+/* Elementor Related Fixes
+========================================================================== */ 
+body.elementor-editor-active .elementor-inner {
+	margin-top: 0 !important;
+}
+.elementor-editor-active .elementor-section-wrap >section:first-child > .elementor-element-overlay,
+.elementor-editor-active .elementor-section-wrap >.elementor-add-section:first-child > .elementor-element-overlay
+{
+	top: 25px !important;
+}
+
+.elementor-icon-box-title{
+	margin-top: 0;
+}
+
+.elementor-posts-container.elementor-has-item-ratio .elementor-post__thumbnail.elementor-fit-height img {
+	max-width: initial !important;
+	height: 100% !important;
+}
+
+.elementor-image-carousel-wrapper [type=button]{
+	overflow: visible;
+	height: auto;
+	border-radius: auto;
+	font-weight: inherit;
+	background-color: transparent !important;
+	width: auto !important;
+} 
+/* VC Related Fixes
+========================================================================== */ 
+
+	.content_row_wrapper{
+		> .rt-column-container{
+			padding-left: 0;
+			padding-right: 0;
+
+			> .rt-column-inner{
+				padding-left: floor(($rt-grid-gutter-width / 2));
+				padding-right: floor(($rt-grid-gutter-width / 2));
+			}
+
+			&.nopadding > .rt-column-inner{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		.rt-wrapper{
+			position: relative;
+
+			.wpb_content_element:last-child{
+				margin-bottom: 0;
+			}
+			
+		}
+	}
+
+	.touchevents .vc_video-bg{
+		display: none;
+	}
+
+	.rt-vc-wrapper > .vc_empty-placeholder:first-child{
+		display: none;
+	}
+
+/* Various Fixes
+========================================================================== */	
+	//fixed background fix for touch devices
+	.touchevents .content_row, .touchevents .rt-column-container{
+		background-attachment: scroll !important;
+	}

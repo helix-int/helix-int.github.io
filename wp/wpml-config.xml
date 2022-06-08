@@ -1,0 +1,114 @@
+<wpml-config> 
+    <custom-types>
+        <custom-type translate="1">portfolio</custom-type>
+        <custom-type translate="1">staff</custom-type>
+        <custom-type translate="1">testimonial</custom-type>         
+	</custom-types>    
+
+	<taxonomies>
+		<taxonomy translate="1">portfolio_categories</taxonomy>
+		<taxonomy translate="1">testimonial_categories</taxonomy>
+	</taxonomies>
+
+	<admin-texts>
+		<key name="theme_mods_businesslounge">
+			<key name='businesslounge_staff_page' /> 
+			<key name='businesslounge_portf_page' /> 
+			<key name='businesslounge_blog_page' /> 
+			<key name='businesslounge_rss' />
+			<key name='businesslounge_rss_text' />
+			<key name='businesslounge_mail' />
+			<key name='businesslounge_mail_text' />
+			<key name='businesslounge_twitter' />
+			<key name='businesslounge_twitter_text' />
+			<key name='businesslounge_facebook' />
+			<key name='businesslounge_facebook_text' />
+			<key name='businesslounge_flickr' />
+			<key name='businesslounge_flickr_text' />
+			<key name='businesslounge_gplus' />
+			<key name='businesslounge_gplus_text' />
+			<key name='businesslounge_pinterest' />
+			<key name='businesslounge_pinterest_text' />
+			<key name='businesslounge_tumblr' />
+			<key name='businesslounge_tumblr_text' />
+			<key name='businesslounge_linkedin' />
+			<key name='businesslounge_linkedin_text' />
+			<key name='businesslounge_dribbble' />
+			<key name='businesslounge_dribbble_text' />
+			<key name='businesslounge_skype' />
+			<key name='businesslounge_skype_text' />
+			<key name='businesslounge_behance' />
+			<key name='businesslounge_behance_text' />
+			<key name='businesslounge_github' />
+			<key name='businesslounge_github_text' />
+			<key name='businesslounge_vimeo' />
+			<key name='businesslounge_vimeo_text' />
+			<key name='businesslounge_stumbleupon' />
+			<key name='businesslounge_stumbleupon_text' />
+			<key name='businesslounge_lastfm' />
+			<key name='businesslounge_lastfm_text' />
+			<key name='businesslounge_spotify' />
+			<key name='businesslounge_spotify_text' />
+			<key name='businesslounge_instagram' />
+			<key name='businesslounge_instagram_text' />
+			<key name='businesslounge_dropbox' />
+			<key name='businesslounge_dropbox_text' />
+			<key name='businesslounge_evernote' />
+			<key name='businesslounge_evernote_text' />
+			<key name='businesslounge_flattr' />
+			<key name='businesslounge_flattr_text' />
+			<key name='businesslounge_paypal' />
+			<key name='businesslounge_paypal_text' />
+			<key name='businesslounge_picasa' />
+			<key name='businesslounge_picasa_text' />
+			<key name='businesslounge_vkontakte' />
+			<key name='businesslounge_vkontakte_text' />
+			<key name='businesslounge_youtube-play' />
+			<key name='businesslounge_youtube-play_text' />
+			<key name='businesslounge_soundcloud' />
+			<key name='businesslounge_soundcloud_text' />
+			<key name='businesslounge_foursquare' />
+			<key name='businesslounge_foursquare_text' />
+			<key name='businesslounge_delicious' />
+			<key name='businesslounge_delicious_text' />
+			<key name='businesslounge_forrst' />
+			<key name='businesslounge_forrst_text' />
+			<key name='businesslounge_ebay' />
+			<key name='businesslounge_ebay_text' />
+			<key name='businesslounge_android' />
+			<key name='businesslounge_android_text' />
+			<key name='businesslounge_xing' />
+			<key name='businesslounge_xing_text' />
+			<key name='businesslounge_reddit' />
+			<key name='businesslounge_reddit_text' />
+			<key name='businesslounge_digg' />
+			<key name='businesslounge_digg_text' />
+			<key name='businesslounge_macstore' />
+			<key name='businesslounge_macstore_text' />
+			<key name='businesslounge_myspace' />
+			<key name='businesslounge_myspace_text' />
+			<key name='businesslounge_stackoverflow' />
+			<key name='businesslounge_stackoverflow_text' />
+			<key name='businesslounge_slideshare' />
+			<key name='businesslounge_slideshare_text' />
+			<key name='businesslounge_sina-weibo' />
+			<key name='businesslounge_sina-weibo_text' /> 
+			<key name='businesslounge_copyright' />
+			<key name='businesslounge_logo_dark' />
+			<key name='businesslounge_sticky_logo_dark' />
+			<key name='businesslounge_mobile_logo_dark' />
+			<key name='businesslounge_retina_logo_dark' />
+			<key name='businesslounge_retina_sticky_logo_dark' />
+			<key name='businesslounge_retina_mobile_logo_dark' />
+			<key name='businesslounge_logo_light' />
+			<key name='businesslounge_sticky_logo_light' />
+			<key name='businesslounge_mobile_logo_light' />
+			<key name='businesslounge_retina_logo_light' />
+			<key name='businesslounge_retina_sticky_logo_light' />
+			<key name='businesslounge_retina_mobile_logo_light' />
+			<key name='businesslounge_maintenance_page' />
+			<key name='businesslounge_404_page' />
+		</key>
+	</admin-texts>  
+	
+</wpml-config>

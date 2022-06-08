@@ -1,0 +1,233 @@
+/* ==========================================================================
+   SIDE PANEL
+   ========================================================================== */
+	.side-panel-holder{
+		bottom: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 400px;
+		z-index: 520;
+		overflow-y: hidden;
+		backface-visibility: hidden;
+		-webkit-overflow-scrolling: touch;
+
+		.ps-scrollbar-y-rail{
+			display: none;
+		}
+	}
+
+	.side-panel-wrapper{
+		padding: 30px 50px;
+		height: 100%;
+		width: 100%;
+		display: table;
+
+		#side_panel_navigation, .side-panel-contents > .wp-search-form{
+			width: 100%;
+			margin: 0 auto 50px;
+		}
+		
+		.wp-search-form input[type="text"]{
+			height: 50px; 
+			outline-style: none;
+		}
+
+		.wp-search-form span{
+			line-height: 50px;
+			width: 50px;
+			top: -1px;
+			right: 0;
+			text-align: right;
+		}
+
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.side-panel-widgets{
+		display: inline-block;
+
+		> .widget{
+
+			&:not(:last-child){
+				margin-bottom: 50px;
+			}
+
+		}
+	}
+
+	.side-panel-contents > *
+	{
+		display: none;
+		opacity: 0;
+		top:20px;
+		position: relative;
+		max-width: 300px;
+	}
+
+	.side-panel-contents > .animate:not(:last-child){
+		margin-bottom: 40px;
+	}
+
+	.side-panel-contents .widgettitle, .side-panel-contents .widget h5{
+		margin-bottom: 40px;
+		position: relative;
+
+		&:after{
+			content: "";
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			left: 0;
+			bottom: -17px;			
+		}
+	}
+
+	.admin-bar 	.side-panel-wrapper{
+		padding-top: 62px;
+	}
+
+	/* panel open close animation  */
+
+
+	.side-panel-holder{
+		@include transform(translateX(400px));
+		@include transition( transform 0.3s ease-out 0.4s );
+		backface-visibility: hidden; 
+	}
+
+	.side-panel-on{
+
+		.side-panel-holder{
+			@include transform(translateX(0));
+			@include transition( transform 0.3s linear 0.4s );
+			backface-visibility: hidden; 
+		}
+
+	}
+
+/* Side Navigation
+   ========================================================================== */
+	#businesslounge-side-navigation{
+		list-style: none outside none;
+		padding: 0;
+
+		li{
+			position: relative;
+			display: block;  
+
+			//top level items
+			a{
+				padding: 15px 0;
+				display: block; 
+				text-decoration:none;
+				outline: none; 
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				position: relative;
+				font-size: 14px;
+			}
+
+			a > sub {
+				display: none;
+			}
+
+			// hover and active states
+			> a:hover,
+			&.current-menu-ancestor > a,
+			&.current-menu-item > a
+			{
+				text-decoration:none; 
+			} 	
+
+			//has sub menu
+			&.menu-item-has-children > a:after{
+				content: "\2a";
+				font-family: "rtui";
+				float: right;
+			}
+
+			&.menu-item-has-children.active > a:after{
+				content: "\29";
+			}
+
+		}
+
+		// sub menus
+		ul{
+			list-style: none outside none;
+			margin: 0;
+			padding: 0;				
+			display: none;
+
+			a{
+				text-decoration:none;  
+			}
+
+			> li > a{
+				padding-left: 15px;
+			}
+
+			> li li > a{
+				padding-left: 20px;
+			}
+
+			> li li li > a{
+				padding-left: 25px;
+			}
+
+			> li li li li > a{
+				padding-left: 30px;
+			}			
+
+			> li li li li li > a{
+				padding-left: 35px;
+			}			
+		}
+
+		ul.menu-visible{
+			display: block;
+		}
+	}
+
+/* Mini Cart
+	========================================================================== */
+	.side-panel-contents > .widget_shopping_cart{
+		.cart_list li{
+			border-style: solid;
+			border-width: 0 0 1px 0;
+			padding: 20px 0 20px 54px;
+		}
+
+		.total{
+			padding: 30px 0 !important;
+		}
+
+		.cart_list li.empty{
+			padding: 20px 0;
+			border: none;
+		}
+	}
+		
+
+/* Login
+	========================================================================== */
+	.side-panel-contents > .widget.rt_woocommerce_login{
+		.form-row > label {
+			display: block;
+			text-align: left;
+			font-weight: inherit;
+		}
+
+		.input-text, .button{
+			width: 100%;
+		}
+
+		form.login{
+			padding: 0;
+			border-width: 0;
+		}
+	}

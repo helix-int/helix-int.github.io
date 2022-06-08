@@ -1,0 +1,56 @@
+/* ==========================================================================
+   PAGINATION
+   ========================================================================== */
+	.paging_wrapper{
+		text-align:center;
+		display:block;
+		clear:both;
+
+		ul.page-numbers {
+			display:inline-table; 
+			margin:0;
+			padding: 0 10px;
+			position:relative;
+			list-style-type:none; 
+			border-radius: 20px;
+			overflow: hidden;  
+			border-width: 2px;
+			border-style: solid;
+
+			li{
+				display:inline; 
+				float:left; 		
+			}
+
+			a, li > span{				
+				overflow:hidden;
+				line-height: 300%;
+				display:block;
+				text-align:center;
+				text-decoration:none; 
+				padding: 0 10px;		
+				border-style: solid;
+				border-width: 0 2px 0 0;
+				font-size: 0.8em;
+			}
+		 
+			li:last-child a, li:last-child > span {
+				border-width:0;  
+			}
+
+		 	.prev, .next{
+				padding: 0 15px;	 		
+		 	}
+
+			.current, .dots{
+				text-decoration:none; 
+				padding: 0 20px;		
+			} 	
+
+
+			a:hover, .current{
+				text-decoration:none;  
+			}
+
+		}
+	}

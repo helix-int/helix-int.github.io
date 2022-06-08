@@ -1,0 +1,1307 @@
+/*!
+ * 
+ * businesslounge RTL CSS File
+ * Copyright  RT-Themes
+ * http://rtthemes.com
+ * 
+ */
+/* ==========================================================================
+   GLOBAL STRUCTURE
+   ========================================================================== */
+/* Grid correction for Bootsrap & Visual Composer for fixing order of the columns on mobile phones
+   ========================================================================== */
+.rtl .col-xs-1, .rtl .col-xs-2, .rtl .col-xs-3, .rtl .col-xs-4, .rtl .col-xs-5, .rtl .col-xs-6, .rtl .col-xs-7, .rtl .col-xs-8, .rtl .col-xs-9, .rtl .col-xs-10, .rtl .col-xs-11, .rtl .col-xs-12,
+.rtl .vc_col-xs-1, .rtl .vc_col-xs-2, .rtl .vc_col-xs-3, .rtl .vc_col-xs-4, .rtl .vc_col-xs-5, .rtl .vc_col-xs-6, .rtl .vc_col-xs-7, .rtl .vc_col-xs-8, .rtl .vc_col-xs-9, .rtl .vc_col-xs-10, .rtl .vc_col-xs-11, .rtl .vc_col-xs-12 {
+  float: right;
+}
+@media (min-width: 768px) {
+  .rtl .col-sm-1, .rtl .col-sm-2, .rtl .col-sm-3, .rtl .col-sm-4, .rtl .col-sm-5, .rtl .col-sm-6, .rtl .col-sm-7, .rtl .col-sm-8, .rtl .col-sm-9, .rtl .col-sm-10, .rtl .col-sm-11, .rtl .col-sm-12,
+  .rtl .vc_col-sm-1, .rtl .vc_col-sm-2, .rtl .vc_col-sm-3, .rtl .vc_col-sm-4, .rtl .vc_col-sm-5, .rtl .vc_col-sm-6, .rtl .vc_col-sm-7, .rtl .vc_col-sm-8, .rtl .vc_col-sm-9, .rtl .vc_col-sm-10, .rtl .vc_col-sm-11, .rtl .vc_col-sm-12 {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  .rtl .col-md-1, .rtl .col-md-2, .rtl .col-md-3, .rtl .col-md-4, .rtl .col-md-5, .rtl .col-md-6, .rtl .col-md-7, .rtl .col-md-8, .rtl .col-md-9, .rtl .col-md-10, .rtl .col-md-11, .rtl .col-md-12,
+  .rtl .vc_col-md-1, .rtl .vc_col-md-2, .rtl .vc_col-md-3, .rtl .vc_col-md-4, .rtl .vc_col-md-5, .rtl .vc_col-md-6, .rtl .vc_col-md-7, .rtl .vc_col-md-8, .rtl .vc_col-md-9, .rtl .vc_col-md-10, .rtl .vc_col-md-11, .rtl .vc_col-md-12 {
+    float: right;
+  }
+}
+@media (min-width: 1200px) {
+  .rtl .col-lg-1, .rtl .col-lg-2, .rtl .col-lg-3, .rtl .col-lg-4, .rtl .col-lg-5, .rtl .col-lg-6, .rtl .col-lg-7, .rtl .col-lg-8, .rtl .col-lg-9, .rtl .col-lg-10, .rtl .col-lg-11, .rtl .col-lg-12,
+  .rtl .vc_col-lg-1, .rtl .vc_col-lg-2, .rtl .vc_col-lg-3, .rtl .vc_col-lg-4, .rtl .vc_col-lg-5, .rtl .vc_col-lg-6, .rtl .vc_col-lg-7, .rtl .vc_col-lg-8, .rtl .vc_col-lg-9, .rtl .vc_col-lg-10, .rtl .vc_col-lg-11, .rtl .vc_col-lg-12 {
+    float: right;
+  }
+}
+
+/* Bootsrap
+   ========================================================================== */
+th {
+  text-align: right;
+}
+
+/* Header
+   ========================================================================== */
+/* desktop view logo */
+#logo {
+  float: right;
+}
+
+.header-style-2 #logo, .header-style-3 #logo, #sticky-logo {
+  padding-right: auto;
+  padding-left: 24px;
+  border-width: 0 0 0 1px;
+}
+
+/* header rows */
+.header-row .header-col.right {
+  margin-right: auto;
+  margin-left: inherit;
+}
+.header-row .header-col.right > *:last-child {
+  padding-left: 0;
+  padding-right: 24px;
+}
+.header-row .header-col .widget_text .icon, .header-row .header-col .widget-businesslounge-text .icon {
+  margin-right: auto;
+  margin-left: 0.4em;
+}
+
+.header-style-2 .header-row.second .header-col.left > *:first-child {
+  padding-left: 24px;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.header-style-4 .header-row .header-col.left > *:first-child {
+  padding-left: 24px;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.header-row .header-col:not(.first) > .header-widget:not(:last-child) {
+  border-width: 0 0 0 1px;
+}
+
+.header-row.first .header-col.left > .header-widget {
+  border-width: 0 0 0 1px;
+}
+
+.header-col > nav:not(:last-child), .header-col > .header-tools:not(:last-child) {
+  border-width: 0 0 0 1px;
+}
+
+/* ==========================================================================
+   SOCIAL MEDIA ICONS
+   ========================================================================== */
+.footer ul.social_media > li {
+  margin: 0 0 4px 4px;
+}
+.footer ul.social_media > li:after, .footer ul.social_media > li:before {
+  right: 0;
+  left: auto;
+}
+.footer ul.social_media > li a > span {
+  right: -85px;
+  left: auto;
+}
+.footer ul.social_media > li a > span:after {
+  right: calc(50% - 5px);
+  left: auto;
+}
+
+ul.social_media.multiline-list a:before {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+/* ==========================================================================
+   TOOLS
+   ========================================================================== */
+.header-tools > ul {
+  float: left;
+}
+.header-tools > ul > li {
+  float: right;
+}
+.header-tools > ul > li:last-child > a {
+  padding-right: 8px;
+  padding-left: 0;
+}
+.header-tools .businesslounge-wpml-menu-button .rt-flag {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+/* Mobile Header
+   ========================================================================== */
+.mobile-header-holder .mobile-menu-button-wrapper {
+  margin-right: -10px;
+  margin-left: auto;
+}
+
+/* Sub Page Header Row
+   ========================================================================== */
+.sub_page_header .page-title {
+  float: right;
+}
+.sub_page_header.left-aligned .page-title {
+  text-align: right;
+}
+
+/* Footer
+   ========================================================================== */
+.footer_info_bar .copyright {
+  float: right;
+}
+.footer_info_bar .social_media {
+  float: left;
+}
+
+#footer-navigation li {
+  float: right;
+  border-width: 0 1px 0 0;
+  padding-right: 20px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* ==========================================================================
+   MAIN NAVIGATION
+   ========================================================================== */
+/* Desktop Navigation
+   ========================================================================== */
+.header-col .main-menu > li {
+  float: right;
+}
+.header-col .main-menu > li a > span {
+  border-width: 0 0 0 1px;
+}
+.header-col .main-menu span > i:before, .header-col .main-menu a > i:before {
+  margin-right: inherit;
+  margin-left: 0.5em;
+}
+.header-col .main-menu ul {
+  text-align: right;
+}
+.header-col .main-menu ul ul {
+  margin-left: 0;
+  margin-right: 220px;
+  padding: 0 2px 0 0;
+}
+.header-col .main-menu > li.menu-item-has-children > a > span:after {
+  padding-right: 0.4em;
+  padding-left: 0;
+}
+.header-col .main-menu > li li.menu-item-has-children:after {
+  content: "\22";
+  font-family: "rtui";
+  left: 10px;
+  right: inherit;
+  top: 0.5em;
+}
+.header-col .main-menu > li.o-direction .sub-menu {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+.header-col .main-menu > li.o-direction .sub-menu li.menu-item-has-children:after {
+  content: "\28";
+  right: 10px;
+  left: auto;
+  direction: ltr;
+}
+.header-col .main-menu > li.o-direction .sub-menu ul {
+  margin-left: 220px;
+  margin-right: 0;
+  padding: 0 0 0 2px;
+}
+
+.main-menu .multicolumn-holder > li > ul {
+  margin-right: 0 !important;
+}
+.main-menu .multicolumn-holder > li > ul li > a:before {
+  content: "\22";
+  padding-left: 0.4em;
+  padding-right: 0;
+  direction: ltr;
+}
+.main-menu .multicolumn-holder > li > ul ul .sub-menu {
+  margin-right: 0.75em;
+  margin-left: 0;
+}
+.main-menu .multicolumn-holder > li > ul ul sub,
+.main-menu .multicolumn-holder > li > ul li:not(.menu-item-has-children) > a > sub {
+  margin-left: 0;
+  margin-right: 0.75em;
+}
+.main-menu .multicolumn-holder > li:not(:last-child) {
+  border-width: 0 0 0 1px;
+}
+.main-menu .multicolumn-holder a > i {
+  float: left;
+}
+.main-menu .multicolumn-holder a > i:before {
+  margin-left: 0;
+  margin-right: 0.5em;
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION 
+   ========================================================================== */
+.mobile-nav {
+  right: 0;
+  left: inherit;
+}
+
+#mobile-navigation ul {
+  right: auto;
+  left: 0;
+}
+#mobile-navigation li a, #mobile-navigation li span {
+  text-align: right;
+}
+#mobile-navigation li.menu-item-has-children > a, #mobile-navigation li.menu-item-has-children > span {
+  padding-left: 65px;
+  padding-right: 20px;
+}
+#mobile-navigation li.menu-item-has-children > a:after, #mobile-navigation li.menu-item-has-children > span:after {
+  left: 50px;
+  right: auto;
+}
+#mobile-navigation li.menu-item-has-children > a:before, #mobile-navigation li.menu-item-has-children > span:before {
+  right: auto;
+  left: 20px;
+}
+#mobile-navigation li li li a {
+  padding-right: 25px;
+  padding-left: auto;
+}
+#mobile-navigation li li li li a {
+  padding-right: 35px;
+  padding-left: auto;
+}
+#mobile-navigation li li li li a {
+  padding-right: 45px;
+  padding-left: auto;
+}
+#mobile-navigation li li li li li a {
+  padding-right: 50px;
+  padding-left: auto;
+}
+#mobile-navigation li li li li li li a {
+  padding-right: 60px;
+  padding-left: auto;
+}
+#mobile-navigation li li li li li li li a {
+  padding-right: 70px;
+  padding-left: auto;
+}
+
+/* Sidebars
+   ========================================================================== */
+.sidebar.right {
+  float: left;
+}
+
+.sidebar.left {
+  float: right;
+}
+
+.sidebar.left .widget > h5:after {
+  left: auto;
+  right: 0;
+}
+
+.sidebar.right .widget > h5:after {
+  right: 0;
+  left: auto;
+}
+
+/* Cotnents with sidebars
+   ========================================================================== */
+.content.left-sidebar {
+  float: left;
+}
+
+.content.right-sidebar {
+  float: right;
+}
+
+/* ==========================================================================
+   BREADCRUMB MENU
+   ========================================================================== */
+.breadcrumb {
+  float: left;
+}
+.breadcrumb li {
+  float: right;
+}
+.breadcrumb a.ui-icon-home:before {
+  margin-right: 0;
+  margin-left: 5px;
+  text-align: right;
+}
+.breadcrumb .icon-angle-right:before {
+  content: "\f104";
+}
+
+/* ==========================================================================
+   WIDGETS
+   ========================================================================== */
+.widget:not(.topbar-widget) > ul {
+  padding-right: 0;
+}
+.widget:not(.topbar-widget) #loginform label {
+  text-align: right;
+}
+
+.widget:not(.topbar-widget).widget_pages > ul, .widget:not(.topbar-widget).widget_categories > ul, .widget:not(.topbar-widget) .product-categories, .widget:not(.topbar-widget) .menu {
+  padding-right: 0;
+}
+.widget:not(.topbar-widget).widget_pages > ul ul, .widget:not(.topbar-widget).widget_categories > ul ul, .widget:not(.topbar-widget) .product-categories ul, .widget:not(.topbar-widget) .menu ul {
+  padding-right: 0;
+}
+.widget:not(.topbar-widget).widget_pages > ul ul ul, .widget:not(.topbar-widget).widget_categories > ul ul ul, .widget:not(.topbar-widget) .product-categories ul ul, .widget:not(.topbar-widget) .menu ul ul {
+  padding-left: 0;
+  padding-right: 15px;
+}
+.widget:not(.topbar-widget).widget_pages > ul > li:hover:before, .widget:not(.topbar-widget).widget_categories > ul > li:hover:before, .widget:not(.topbar-widget) .product-categories > li:hover:before, .widget:not(.topbar-widget) .menu > li:hover:before {
+  padding-right: 0;
+  padding-left: 10px;
+  content: "\22";
+}
+
+/* search widget */
+.wp-search-form span, .widget_product_search > form span {
+  left: 0;
+  right: auto;
+}
+
+/* Latest Posts */
+.widget_latest_posts .post-thumb, .widget_popular_posts .post-thumb {
+  float: right;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.widget_latest_posts .icon-comment-empty, .widget_popular_posts .icon-comment-empty {
+  margin-right: auto;
+  margin-left: 2px;
+}
+
+/* ==========================================================================
+   PAGINATION
+   ========================================================================== */
+.paging_wrapper > .page-numbers li {
+  float: right;
+}
+.paging_wrapper > .page-numbers li a, .paging_wrapper > .page-numbers li li > span, .paging_wrapper > .page-numbers li:first-child a, .paging_wrapper > .page-numbers li:first-child > span {
+  border-width: 0 0 0 1px;
+}
+.paging_wrapper > .page-numbers li .ui-icon-angle-right:before {
+  content: "\22";
+}
+.paging_wrapper > .page-numbers li .ui-icon-angle-left:before {
+  content: "\28";
+}
+
+/* Social Share
+   ========================================================================== */
+.entry-footer .social_share {
+  float: left;
+}
+.entry-footer .social_share .social_share span > span {
+  margin-right: 1em;
+  margin-left: 0;
+}
+
+/* ==========================================================================
+   CAROUSELS
+   ========================================================================== */
+/* navigation */
+.owl-nav .owl-next {
+  right: auto;
+  left: -40px;
+}
+.owl-nav .owl-prev {
+  left: auto;
+  right: -40px;
+}
+
+/* arrows for main carousel state */
+.carousel-holder.main-carousel {
+  /* hover state */
+}
+.carousel-holder.main-carousel .owl-carousel:hover .owl-nav:not(.disabled) .owl-next {
+  right: auto;
+  left: 10px;
+}
+.carousel-holder.main-carousel .owl-carousel:hover .owl-nav:not(.disabled) .owl-prev {
+  left: auto;
+  right: 10px;
+}
+.carousel-holder.main-carousel .owl-carousel:hover .owl-nav:not(.disabled) > div:hover.owl-next {
+  padding: 0 15px 0 5px;
+}
+.carousel-holder.main-carousel .owl-carousel:hover .owl-nav:not(.disabled) > div:hover.owl-prev {
+  padding: 0 5px 0 15px;
+}
+
+.post-carousel .owl-nav .owl-next {
+  right: auto;
+  left: 0;
+}
+.post-carousel .owl-nav .owl-prev {
+  left: auto;
+  right: 0;
+}
+
+/* dots for main carousel */
+.carousel-holder.main-carousel .dots-holder > div {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+/* ==========================================================================
+  TESTIMONIALS
+  ========================================================================== */
+/* quotes */
+.testimonial .text .quote {
+  left: auto;
+  right: 0;
+}
+
+/* client info */
+.client-info {
+  text-align: right;
+}
+
+/* testimonial left aligned text */
+.testimonials.left .text {
+  padding-left: 0;
+  padding-right: 10px;
+}
+.testimonials.left .testimonial.has-image .client-info {
+  float: right;
+  margin: 25px 25px 0 0;
+}
+.testimonials.left .testimonial.has-image .client-image {
+  float: right;
+}
+
+/* ==========================================================================
+   DESIGN ELEMENTS
+   ========================================================================== */
+/* Featured Images
+   ========================================================================== */
+/* image effect */
+.imgeffect .action-button {
+  right: auto;
+  left: 20px;
+}
+
+/* Grid Borders
+   ========================================================================== */
+.border_grid > .row > div:after, .border_grid .rt-column-container:after, .border_grid .col:after, .border_grid .elementor-column:after {
+  left: auto;
+  right: -1px;
+  border-width: 0 0 0 1px;
+}
+
+/* Custom Select Box
+   ========================================================================== */
+.hasCustomSelect {
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.customselect {
+  padding: 4px 10px 4px 20px;
+}
+
+.customselect .customselectInner:before {
+  right: auto;
+  left: 10px;
+}
+
+/* Parallax Backgrounds
+   ========================================================================== */
+.rt-parallax-background {
+  left: auto;
+  right: 0;
+}
+
+/* Read More Links
+   ========================================================================== */
+.read_more:after {
+  content: "\60";
+  display: inline-block;
+  font-family: "rtui";
+  padding-right: 10px;
+}
+
+.read_more:hover:after {
+  padding-right: 13px;
+}
+
+/* Lists
+   ========================================================================== */
+ul,
+ol {
+  padding-left: auto;
+  padding-right: 20px;
+}
+
+/* blockquote
+   ========================================================================== */
+blockquote:before {
+  content: "\201d";
+  float: right;
+}
+blockquote p {
+  margin-left: auto;
+  margin-right: 3em;
+}
+blockquote cite {
+  margin-right: 3.75em;
+  margin-left: 0;
+}
+blockquote cite:before {
+  content: '\2014 \00A0';
+}
+
+/* Go to top
+   ========================================================================== */
+.go-to-top {
+  right: auto;
+  left: 10px;
+}
+
+/* Post Navigation
+   ========================================================================== */
+.businesslounge-post-navigation > div > *:first-child {
+  text-align: right;
+}
+.businesslounge-post-navigation > div > *:first-child a:before {
+  content: "\29";
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+.businesslounge-post-navigation .rt-prev-post .post-nav-img {
+  left: inherit;
+  right: 0;
+}
+.businesslounge-post-navigation .rt-next-post .post-nav-img {
+  right: inherit;
+  left: 0;
+}
+.businesslounge-post-navigation > div > *:last-child {
+  text-align: left;
+}
+.businesslounge-post-navigation > div > *:last-child a:before {
+  content: "\22";
+  float: left;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* popups
+   ========================================================================== */
+.rt-popup-close {
+  right: auto;
+  left: 40px;
+}
+
+/* popups search
+   ========================================================================== */
+.rt-popup-search .wp-search-form span {
+  left: 0.75em;
+  right: auto;
+}
+
+/* ==========================================================================
+   PORTFOLIO
+   ========================================================================== */
+.loop.type-portfolio > .overlay .text {
+  left: auto;
+  right: 20px;
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio_list > .row > .col-sm-12 .style-1 .image-thumbnail {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0;
+  }
+  .portfolio_list > .row > .col-sm-12 .style-1 .text {
+    left: 0;
+  }
+}
+/* filter navigation
+   ========================================================================== */
+.filter-holder {
+  text-align: right;
+}
+
+.filter_navigation li:first-child {
+  border-right: 0 none;
+  padding-right: 0;
+  border-left: inherit;
+  padding-left: inherit;
+}
+
+.filter_navigation li > span {
+  float: right;
+}
+.filter_navigation li ul {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+/* ==========================================================================
+	SHORTCODES
+	========================================================================== */
+/* CONTENT SLIDER
+	========================================================================== */
+.slide-content-wrapper .slide-content.left {
+  left: auto;
+  right: 0;
+}
+.slide-content-wrapper .slide-content.right {
+  right: auto;
+  left: 0;
+}
+
+.text-navigation-wrapper {
+  margin: auto;
+}
+.text-navigation-wrapper a {
+  border-width: 0 0 0 1px;
+}
+.text-navigation-wrapper a:first-child {
+  border-width: 0 1px;
+}
+
+/* TIMELINES
+	========================================================================== */
+.timeline.style-2 .event-date {
+  float: right;
+}
+.timeline.style-2 .event-date:after {
+  left: 10px;
+  right: auto;
+}
+.timeline.style-2 .month:nth-child(2) {
+  margin-left: auto;
+  margin-right: 4px;
+}
+.timeline.style-2 .event-details {
+  text-align: right;
+}
+
+/* ICON LISTS
+	========================================================================== */
+.with_icons > div > .icon {
+  float: right;
+}
+.with_icons > div > div {
+  margin-right: 25px;
+  margin-left: auto;
+}
+
+/* icon list - style 1 */
+.with_icons.style-1 > div > .icon {
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+/* icon list - style 2 */
+.with_icons.style-2 > div > .icon {
+  margin-left: 5px;
+  margin-right: auto;
+}
+
+/* icon list - style 3 */
+.with_icons.style-3 > div > .icon {
+  margin-left: 5px;
+  margin-right: auto;
+}
+.with_icons.style-3 > div > div {
+  margin-right: 35px;
+  margin-left: auto;
+}
+
+/* icon list - style 4 */
+.with_icons.style-4 > div > .icon {
+  margin-left: 10px;
+  margin-right: auto;
+}
+.with_icons.style-4 > div > div {
+  margin-right: 2em;
+  margin-left: auto;
+}
+
+/* DIVIDERS
+	========================================================================== */
+/* style 1 */
+.rt_divider.style-1:before {
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+/* style 3 */
+.rt_divider.style-3:after {
+  left: auto;
+  right: 0;
+}
+
+/* PRICING TABLES
+	========================================================================== */
+/* compare table style */
+.pricing_table.compare .table_wrap.features > ul {
+  border-right-width: 1px;
+  border-left-width: 0;
+}
+
+/* BUTTONS
+	========================================================================== */
+.button_ .button-icon, .button .button-icon {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.arrow > .button_ > span:after {
+  content: '\e812';
+  padding: 0 0.5em 0 0;
+}
+
+button.button_.with_icon:before {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* small buttons */
+.button_.small .button-icon {
+  margin-right: auto;
+  margin-left: 6px;
+}
+
+/*	medium buttons */
+.button_.medium .button-icon {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* 	big buttons */
+.button_.big .button-icon {
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+/* hero buttons */
+.button_.hero .button-icon {
+  margin-right: auto;
+  margin-left: 12px;
+}
+
+/* TOGGLES ( ACCORDIONS )
+	========================================================================== */
+.rt-toggle > ol:before {
+  right: 12.5px;
+  left: auto;
+}
+.rt-toggle > ol > li .toggle-number, .rt-toggle > ol > li.open .toggle-number {
+  left: auto;
+  right: 0.5em;
+}
+.rt-toggle > ol > li .toggle-title {
+  margin: 0 0.5em 0 30px;
+}
+.rt-toggle > ol > li .toggle-content {
+  margin: 10px calc(2.2em + 10px) 0 0;
+}
+.rt-toggle.no-numbers ol li .toggle-title {
+  margin: 0 0 0 30px;
+}
+.rt-toggle .toggle-head:after {
+  left: 0;
+  right: auto;
+}
+
+/* TABS
+	========================================================================== */
+/* position 1 */
+.rt_tabs.tab-position-1 .tab_nav > li > span:before,
+.rt_tabs.tab-position-1 .tab_content_wrapper > .tab_title > span:before {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+/* position 2 */
+.rt_tabs.tab-position-2 .tab_nav > li > span:before,
+.rt_tabs.tab-position-2 .tab_content_wrapper > .tab_title > span:before {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+/* HEADING SHORTCODE
+	========================================================================== */
+/* style 1 */
+.rt-heading-wrapper.style-1 .style-1 {
+  padding-right: 60px;
+  padding-left: 0;
+}
+.rt-heading-wrapper.style-1 .style-1:after {
+  left: auto;
+  right: 0;
+}
+.rt-heading-wrapper.style-1 .punchline {
+  padding-right: 60px;
+  padding-left: 0;
+}
+
+/* style 2 */
+.rt-heading-wrapper.style-2 .style-2 {
+  padding-left: 60px;
+  padding-right: 0;
+}
+.rt-heading-wrapper.style-2 .style-2:after {
+  right: auto;
+  left: 0;
+}
+.rt-heading-wrapper.style-2 .punchline {
+  padding-left: 60px;
+  padding-right: 0;
+}
+
+/* style 5 */
+.rt-heading-wrapper.style-5 .style-5:after {
+  left: auto;
+  right: 0;
+}
+
+/* style 6 */
+.rt-heading-wrapper.style-6 .style-6:after {
+  right: 100%;
+  margin-right: 20px;
+  left: auto;
+  margin-left: 0;
+}
+
+.rt-heading > .heading_icon:before {
+  margin-right: 0.5px;
+  margin-left: 10px;
+  text-align: right;
+}
+
+/* INFO BOXES
+	========================================================================== */
+/* banner icon */
+.info_box p[class^="icon-"]:before, .info_box p[class*=" icon-"]:before {
+  margin: -12px -35px 0 20px;
+}
+
+/* banner text */
+.info_box p {
+  padding: 0 40px 0 10px;
+}
+
+.info_box .icon-cancel {
+  left: 10px;
+  right: auto;
+}
+
+/* LATEST NEWS
+   ========================================================================== */
+.latest_news figure {
+  padding-right: 0;
+  padding-left: 15px;
+}
+.latest_news .text:first-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Bullet Lists
+   ========================================================================== */
+.bullet-list {
+  text-align: right;
+}
+.bullet-list.style-1 > ul {
+  padding-left: 0;
+  padding-right: 2.2em;
+}
+.bullet-list.style-1 > ul > li:before {
+  left: auto;
+  right: -2.2em;
+}
+.bullet-list.style-2 > ul, .bullet-list.style-3 > ul {
+  padding-left: 0;
+  padding-right: 1.5em;
+}
+.bullet-list.style-2 > ul > li:before, .bullet-list.style-3 > ul > li:before {
+  right: -1.5em;
+  left: auto;
+  text-align: right;
+}
+.bullet-list.arrow > ul > li:before {
+  content: "\22";
+  direction: rtl;
+}
+.bullet-list.arrow-2 > ul > li:before {
+  content: "\34";
+}
+
+/* PIE CHARTS
+   ========================================================================== */
+.rt-pie-chart canvas {
+  left: auto;
+  right: 0;
+}
+
+.percent:after {
+  margin-right: 0.1em;
+  margin-left: auto;
+}
+
+/* PROGRESS BARS
+	========================================================================== */
+.businesslounge-progress-desc span {
+  -webkit-transition: right 1.2s ease-in 0s;
+  -o-transition: right 1.2s ease-in 0s;
+  transition: right 1.2s ease-in 0s;
+  -moz-transform: translate(100%, -50%);
+  -ms-transform: translate(100%, -50%);
+  -webkit-transform: translate(100%, -50%);
+  transform: translate(100%, -50%);
+  left: auto;
+  right: 0;
+}
+
+/* COUNTDOWN
+   ========================================================================== */
+.rt-countdown i {
+  margin-left: 18px;
+  margin-right: auto;
+  text-align: left;
+}
+.rt-countdown i b {
+  padding-right: 0;
+  padding-left: 30px;
+  float: right;
+}
+
+@media screen and (max-width: 1160px) {
+  .rt-countdown i {
+    margin-left: 10px;
+    margin-right: auto;
+  }
+  .rt-countdown i b {
+    padding-right: 0;
+    padding-left: 16px;
+  }
+}
+/* ==========================================================================
+   BLOG
+   ========================================================================== */
+/* Article Box style
+   ========================================================================== */
+article.type-post .post-date {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.single-post article.type-post .post_data .date {
+  padding-right: 0;
+  padding-left: 10px;
+  margin-right: 0;
+  margin-left: 10px;
+  border-width: 0 0 0 1px;
+}
+
+/* Author info
+   ========================================================================== */
+.author-avatar {
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+/* Comments
+   ========================================================================== */
+.commentlist .children {
+  padding-right: 70px;
+  padding-left: 0;
+}
+
+.depth-1 > .comment-holder {
+  padding: 30px 0 0 20px;
+}
+
+.comment-avatar {
+  float: right;
+}
+
+.comment-body {
+  margin-left: 0;
+  margin-right: 90px;
+}
+
+.comment-reply a {
+  left: 20px;
+  right: auto;
+}
+
+.comment-reply-title small > a {
+  right: auto;
+  left: 0;
+}
+
+.comment-form .comment-form-author, .comment-form .comment-form-email, .comment-form .comment-form-url {
+  float: right;
+}
+.comment-form .comment-form-author, .comment-form .comment-form-email {
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+.search-post-title .icon-right-hand:before {
+  -moz-transform: rotate(0deg) scaleX(-1);
+  -ms-transform: rotate(0deg) scaleX(-1);
+  -webkit-transform: rotate(0deg) scaleX(-1);
+  transform: rotate(0deg) scaleX(-1);
+}
+
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+/* Contact Form (native)
+   ========================================================================== */
+.rt_form > ul .security-question,
+.rt_form > ul .submit-button {
+  float: right;
+  margin-right: auto;
+  margin-left: 10px;
+}
+.rt_form .loading {
+  float: left;
+}
+
+/* Gravity Forms (plugin)
+   ========================================================================== */
+html[dir="rtl"] .gform_wrapper div input.button.gform_next_button,
+html[dir="rtl"] .gform_wrapper div input.button.gform_button[type="submit"] {
+  float: right;
+}
+
+/* ==========================================================================
+   TOP BAR
+   ========================================================================== */
+.businesslounge-top-bar .top-bar-left {
+  float: right;
+}
+.businesslounge-top-bar .top-bar-right {
+  float: left;
+}
+
+/* Top Bar Widgets
+   ========================================================================== */
+.topbar-widget:last-child {
+  margin-right: 15px;
+  padding-right: 15px;
+}
+.topbar-widget:last-child:after {
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  content: "";
+  display: block;
+  height: 17px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.topbar-widget:first-child:after {
+  border-width: 0;
+}
+.topbar-widget.widget_text .icon, .topbar-widget.widget-businesslounge-text .icon {
+  margin-right: auto;
+  margin-left: 0.4em;
+}
+.topbar-widget > ul > li:not(:last-child) {
+  padding-left: 5px;
+  padding-left: auto;
+}
+
+/* Top Bar Menus
+   ========================================================================== */
+.businesslounge-top-bar .menu ul ul {
+  margin-left: auto;
+  margin-right: 160px;
+}
+.businesslounge-top-bar .menu > li.menu-item-has-children > a:after {
+  padding-right: 5px;
+}
+.businesslounge-top-bar .menu > li.o-direction .sub-menu {
+  right: auto;
+  left: 0;
+}
+.businesslounge-top-bar .menu > li.o-direction .sub-menu ul {
+  margin-right: auto;
+  margin-left: 160px;
+}
+
+/* ==========================================================================
+   SIDE PANEL
+   ========================================================================== */
+.side-panel-holder {
+  right: auto;
+  left: 0;
+}
+
+.side-panel-wrapper .wp-search-form span {
+  right: auto;
+  left: 0;
+  text-align: left;
+}
+
+.side-panel-contents .widgettitle:after, .side-panel-contents .widget h5:after {
+  right: 0;
+  left: auto;
+}
+
+/* panel open close animation  */
+.side-panel-holder {
+  -moz-transform: translateX(-400px);
+  -ms-transform: translateX(-400px);
+  -webkit-transform: translateX(-400px);
+  transform: translateX(-400px);
+}
+
+.side-panel-on .side-panel-holder {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* Side Navigation
+   ========================================================================== */
+#businesslounge-side-navigation li.menu-item-has-children > a:after {
+  float: left;
+}
+#businesslounge-side-navigation ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+#businesslounge-side-navigation ul a {
+  text-decoration: none;
+}
+#businesslounge-side-navigation ul > li > a {
+  padding-right: 15px;
+  padding-left: 0;
+}
+#businesslounge-side-navigation ul > li li > a {
+  padding-right: 20px;
+  padding-left: 0;
+}
+#businesslounge-side-navigation ul > li li li > a {
+  padding-right: 25px;
+  padding-left: 0;
+}
+#businesslounge-side-navigation ul > li li li li > a {
+  padding-right: 30px;
+  padding-left: 0;
+}
+#businesslounge-side-navigation ul > li li li li li > a {
+  padding-right: 35px;
+  padding-left: 0;
+}
+
+/* Mini Cart
+	========================================================================== */
+.side-panel-contents > .widget_shopping_cart .cart_list li {
+  padding: 20px 54px 20px 0;
+}
+
+/* Login
+	========================================================================== */
+.side-panel-contents > .widget.rt_woocommerce_login .form-row > label {
+  text-align: right;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+/* Mobile Header
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+  .header-right {
+    right: auto;
+    left: 0;
+  }
+
+  .mobile-menu-button {
+    left: auto;
+    right: 0;
+  }
+}
+/* Severeal fixes for various screens
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+  .mobile-menu-enabled .header-tools {
+    -moz-transform: translateX(-150%);
+    -ms-transform: translateX(-150%);
+    -webkit-transform: translateX(-150%);
+    transform: translateX(-150%);
+  }
+
+  .mobile-menu-active .header-tools {
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  .header-row .header-col.right > *:last-child {
+    padding-left: 0 !important;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .header-row .header-col.right > *:last-child {
+    padding-left: 14px;
+  }
+}
+/* Small Screen up to 767px
+  ========================================================================== */
+@media screen and (max-width: 767px) {
+  .sub_page_header .breadcrumb li {
+    float: none;
+  }
+
+  body .depth-1 > .comment-holder {
+    padding: 30px 0 0 0;
+  }
+  body .commentlist .children {
+    padding-right: 10px;
+    padding-left: 0;
+  }
+}
+/* Small Screen up to 992px
+  ========================================================================== */
+@media screen and (max-width: 992px) {
+  .footer_info_bar .copyright, .footer_info_bar .social_media {
+    float: none;
+    margin: 20px 0;
+  }
+}
+.footer-navigation-container {
+  float: right;
+}
